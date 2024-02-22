@@ -16,15 +16,15 @@ let PageController = (function () {
 
   //Called from nav buttons, first clear the page, then call to load the new content based on clicked button
   function pageUpdate(event) {
+    buttons.forEach((button) => button.classList.remove("current"));
+    event.target.classList.add("current");
     let requestedPage = event.target.textContent;
-    console.log("Update requested for page.");
     clearPage();
     loadPage(requestedPage);
   }
 
   //Clears the page to prep for new content
   function clearPage() {
-    console.log("Clearing page.");
     mainContent.replaceChildren();
   }
 

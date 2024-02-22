@@ -183,6 +183,11 @@ nav > button:hover {
   cursor: pointer;
 }
 
+.current {
+  font-weight: 900;
+  text-decoration: underline;
+}
+
 .pagetitle {
   font-family: "quicksand";
   font-size: larger;
