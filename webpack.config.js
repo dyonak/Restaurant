@@ -4,15 +4,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: 'bundle.js',
+    filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
     new HtmlWebpackPlugin({
         template: './src/index.html',
-        title: "Peter's Pickle Palace",
         filename: 'index.html',
         inject: 'body',
+        scriptLoading: 'defer',
     }),
   ],
   module: {

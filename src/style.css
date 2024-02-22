@@ -47,3 +47,25 @@ table {
 	border-spacing: 0;
 }
 
+@font-face {
+	font-family: 'quicksand';
+	src: url(./Quicksand-VariableFont_wght.ttf);
+}
+
+@font-face {
+	font-family: 'cinzel';
+	src: url(./Cinzel-VariableFont_wght.ttf);
+}
+
+
+:root {
+	--primary-color: #EEE3AB;
+	--secondary-color: #80A1C1;
+	--tertiary-color: #A77E58;
+	--highlight-color: #BA3F1D;
+	--light-color: #D9CFC1;
+}
+
+header {
+	background-color: var(--primary-color);
+}
