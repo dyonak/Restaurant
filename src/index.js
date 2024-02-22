@@ -1,5 +1,7 @@
 import css from "./style.css";
-import Menu from "./menu.js";
+import { showMenu } from "./menu.js";
+import { showHome } from "./home.js";
+import { showEvents } from "./events.js";
 
 const buttons = document.querySelectorAll(".navbutton");
 const mainContent = document.querySelector("#content");
@@ -30,16 +32,18 @@ let PageController = (function () {
   //That js will fully build the mainContent for it's page (e.g. menu.js for the menu nav button)
   function loadPage(page) {
     console.log("Loading " + page + " page.");
-    const newDiv = document.createElement("div");
-    newDiv.classList.add("pagetitle");
-
-    const newContent = document.createTextNode(page);
-
-    newDiv.appendChild(newContent);
-    mainContent.appendChild(newDiv);
+    if (page === "Menu") {
+      mainContent.appendChild(showMenu());
+    }
+    if (page === "Home") {
+      mainContent.appendChild(showHome());
+    }
+    if (page === "Events") {
+      mainContent.appendChild(showEvents());
+    }
   }
 
-  return { setupPage, pageUpdate, clearPage, loadPage };
+  return { setupPage };
 })();
 
 PageController.setupPage();
