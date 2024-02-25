@@ -197,7 +197,6 @@ main {
   background-image: url("./shots.jpg");
   background-size: 100%;
   background-position: center;
-  display: flex;
   min-height: calc(100dvh - 200px);
 }
 
@@ -206,8 +205,22 @@ main {
   border-bottom: 3px solid var(--secondary-color);
 }
 
+.spacer {
+  height: 250px;
+}
+
+.mainContent {
+  font-family: "cinzel";
+  font-size: x-large;
+  padding: 100px 200px 100px 200px;
+  background-color: var(--tertiary-color);
+  display: flex;
+  flex-direction: column;
+}
+
 .pagetitle {
-  font-family: "quicksand";
-  font-size: larger;
   color: var(--secondary-color);
+  font-size: 2rem;
+  font-weight: 800;
+  padding-bottom: 20px;
 }
